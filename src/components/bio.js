@@ -19,26 +19,14 @@ const Bio = () => {
           }
         }
       }
-      site {
-        siteMetadata {
-          author
-        }
-      }
     }
   `)
 
-  const { author } = data.site.siteMetadata
   return (
     <div>
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
       <p>
-        Written by <strong>{author}</strong>
+        Hey! My name is Austin and I'm a tech enthusiast and consultant. I focus
+        mainly on web development, security and system administration.
       </p>
     </div>
   )

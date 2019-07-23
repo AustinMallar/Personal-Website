@@ -1,17 +1,18 @@
 import React from "react"
 
+import LayoutStyles from "./styles/LayoutStyles"
 import Header from "./header"
 import Footer from "./footer"
 
 const Layout = props => {
-  const { location, title, children } = props
+  const { children } = props
 
   return (
-    <React.Fragment>
-      <Header location={location} title={title} />
+    <LayoutStyles>
+      <Header />
       <main>{children}</main>
       <Footer />
-    </React.Fragment>
+    </LayoutStyles>
   )
 }
 

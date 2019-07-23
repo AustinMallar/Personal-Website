@@ -1,13 +1,47 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Image from "gatsby-image"
 
-const Header = props => {
-  const { title } = props
+import HeaderStyles from "./styles/HeaderStyles"
+
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      avatar: file(absolutePath: { regex: "/austin.jpg/" }) {
+        childImageSharp {
+          fixed(width: 100, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          title
+          author
+        }
+      }
+    }
+  `)
 
   return (
-    <h1>
-      <Link to="/">{title}</Link>
-    </h1>
+    <HeaderStyles>
+      <div className="container">
+        <h1 className="site-title">
+          <Link className="site-link" to="/">
+            {data.site.siteMetadata.title}
+          </Link>
+        </h1>
+        <div className="header-logo-wrap">
+          <Image
+            fixed={data.avatar.childImageSharp.fixed}
+            alt={data.site.siteMetadata.author}
+            imgStyle={{
+              borderRadius: `50%`,
+            }}
+          />
+        </div>
+      </div>
+    </HeaderStyles>
   )
 }
 

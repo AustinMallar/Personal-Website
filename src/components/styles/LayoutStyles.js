@@ -16,6 +16,12 @@ const LayoutStyles = styled.div`
     margin: 0 auto;
     padding: 3rem 0;
   }
+
+  @media (max-width: 1000px) {
+   main {
+     margin: 0 2rem;
+   }
+  }
 `
 
 export default LayoutStyles

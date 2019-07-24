@@ -6,9 +6,12 @@ const FooterStyles = styled.footer`
 
   div.social-links {
     display: flex;
-    justify-content: space-evenly;
     font-size: 2rem;
     color: #4e89c7;
+  }
+
+  svg.social-icon {
+    margin-right: 1rem;
   }
 
   div.footer-text {

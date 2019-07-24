@@ -9,15 +9,8 @@ const footer = () => {
     <FooterStyles>
       <div className="container">
         <div className="social-links">
-          <FontAwesomeIcon icon={faTwitter} />
-          <FontAwesomeIcon icon={faGithub} />
-        </div>
-        <div className="footer-text">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a style={{ fontWeight: "600" }} href="https://www.gatsbyjs.org">
-            Gatsby
-          </a>
+          <FontAwesomeIcon className="social-icon" icon={faTwitter} />
+          <FontAwesomeIcon className="social-icon" icon={faGithub} />
         </div>
       </div>
     </FooterStyles>

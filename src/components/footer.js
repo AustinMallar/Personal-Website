@@ -10,7 +10,7 @@ const footer = () => {
       <div className="container">
         <div className="social-links">
           <span style={{ fontSize: "1.5rem", marginRight: "1rem" }}>
-            Follow:
+            Follow Me:
           </span>
           <a className="social-icon" href="//twitter.com/austin_mallar">
             <FontAwesomeIcon icon={faTwitter} />

@@ -3,7 +3,7 @@ module.exports = {
     title: `Austin Mallar`,
     author: `Austin Mallar`,
     description: `My personal blog.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: ``,
     social: {
       twitter: `austin_mallar`,
     },
@@ -62,7 +62,7 @@ module.exports = {
         short_name: `AustinMallar`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#0069e8`,
         display: `minimal-ui`,
         icon: `content/assets/logo.png`,
       },

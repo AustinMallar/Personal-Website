@@ -15,12 +15,18 @@ const LayoutStyles = styled.div`
     max-width: 900px;
     margin: 0 auto;
     padding: 3rem 0;
+    min-height: 500px;
+  }
+
+  p.bio-text {
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   @media (max-width: 1000px) {
-   main {
-     margin: 0 2rem;
-   }
+    main {
+      margin: 0 2rem;
+    }
   }
 `
 

@@ -1,11 +1,40 @@
 import styled from "styled-components"
 
 const HeaderStyles = styled.header`
-  display: grid;
-  align-items: center;
   height: 200px;
-  background: linear-gradient(#0069e8, #4e89c7);
+  background: radial-gradient(circle at bottom, #4e89c7, #0069e8);
   position: relative;
+
+  div.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(51, 46, 52, 0.35);
+    height: 5rem;
+    width: 100%;
+  }
+
+  div.logo {
+    margin-left: 1rem;
+  }
+
+  div.nav-links ul li {
+    display: inline;
+    margin-right: 2rem;
+  }
+
+  a.nav-link {
+    color: white;
+    transition: color 0.6s;
+  }
+
+  a.active {
+    color: #aaaaaa;
+  }
+
+  a.nav-link:hover {
+    color: #cccccc;
+  }
 
   h1.site-title {
     margin-bottom: 1.6rem;

@@ -14,6 +14,13 @@ const Header = () => {
           }
         }
       }
+      siteLogo: file(absolutePath: { regex: "/logo.png/" }) {
+        childImageSharp {
+          fixed(width: 60, height: 60) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       site {
         siteMetadata {
           title
@@ -25,12 +32,29 @@ const Header = () => {
 
   return (
     <HeaderStyles>
+      <div className="nav-bar">
+        <div className="logo">
+          <Image
+            fixed={data.siteLogo.childImageSharp.fixed}
+            alt={data.site.siteMetadata.author}
+          />
+        </div>
+        <div className="nav-links">
+          <ul>
+            <li>
+              <Link className="nav-link" activeClassName="active" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" activeClassName="active" to="about">
+                About
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className="container">
-        <h1 className="site-title">
-          <Link className="site-link" to="/">
-            {data.site.siteMetadata.title}
-          </Link>
-        </h1>
         <div className="header-logo-wrap">
           <Image
             fixed={data.avatar.childImageSharp.fixed}

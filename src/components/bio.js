@@ -23,10 +23,9 @@ const Bio = () => {
   `)
 
   return (
-    <div>
-      <p>
-        Hey! My name is Austin and I'm a tech enthusiast and consultant. I focus
-        mainly on web development, security and system administration.
+    <div style={{ marginBottom: "2rem" }}>
+      <p className="bio-text">
+        Hey! My name is Austin and I'm a tech enthusiast and consultant.
       </p>
     </div>
   )

@@ -7,11 +7,17 @@ const FooterStyles = styled.footer`
   div.social-links {
     display: flex;
     font-size: 2rem;
-    color: #4e89c7;
+    align-items: center;
   }
 
-  svg.social-icon {
+  a.social-icon {
     margin-right: 1rem;
+    color: #4e89c7;
+    transition: color 0.5s;
+  }
+
+  a.social-icon:hover {
+    color: #b51f24;
   }
 
   div.footer-text {

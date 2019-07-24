@@ -9,8 +9,15 @@ const footer = () => {
     <FooterStyles>
       <div className="container">
         <div className="social-links">
-          <FontAwesomeIcon className="social-icon" icon={faTwitter} />
-          <FontAwesomeIcon className="social-icon" icon={faGithub} />
+          <span style={{ fontSize: "1.5rem", marginRight: "1rem" }}>
+            Follow:
+          </span>
+          <a className="social-icon" href="//twitter.com/austin_mallar">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a className="social-icon" href="//github.com/austinmallar">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
         </div>
       </div>
     </FooterStyles>

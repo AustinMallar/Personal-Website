@@ -34,10 +34,12 @@ const Header = () => {
     <HeaderStyles>
       <div className="nav-bar">
         <div className="logo">
-          <Image
-            fixed={data.siteLogo.childImageSharp.fixed}
-            alt={data.site.siteMetadata.author}
-          />
+          <Link to="/">
+            <Image
+              fixed={data.siteLogo.childImageSharp.fixed}
+              alt={data.site.siteMetadata.author}
+            />
+          </Link>
         </div>
         <div className="nav-links">
           <ul>
@@ -56,13 +58,15 @@ const Header = () => {
       </div>
       <div className="container">
         <div className="header-logo-wrap">
-          <Image
-            fixed={data.avatar.childImageSharp.fixed}
-            alt={data.site.siteMetadata.author}
-            imgStyle={{
-              borderRadius: `50%`,
-            }}
-          />
+          <Link to="/">
+            <Image
+              fixed={data.avatar.childImageSharp.fixed}
+              alt={data.site.siteMetadata.author}
+              imgStyle={{
+                borderRadius: `50%`,
+              }}
+            />
+          </Link>
         </div>
       </div>
     </HeaderStyles>

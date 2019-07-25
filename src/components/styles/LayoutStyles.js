@@ -3,7 +3,12 @@ import styled from "styled-components"
 const LayoutStyles = styled.div`
   a {
     text-decoration: none;
-    color: #222222;
+    color: #086ce4;
+    transition: color 0.6s;
+  }
+
+  a:hover {
+    color: #b51f24;
   }
 
   div.container {

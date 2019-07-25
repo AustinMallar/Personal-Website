@@ -23,9 +23,17 @@ const Bio = () => {
   `)
 
   return (
-    <div style={{ marginBottom: "2rem" }}>
+    <div style={{ marginBottom: "4rem" }}>
+      <p className="bio-text">Hey! My name is Austin.</p>
       <p className="bio-text">
-        Hey! My name is Austin and I'm a tech enthusiast and consultant.
+        I am the Lead Technology Consultant at{" "}
+        <a style={{ fontWeight: "600" }} href="//www.longhouse.co/">
+          Longhouse Consulting
+        </a>
+        . I also play in the rock band{" "}
+        <a style={{ fontWeight: "600" }} href="//servoband.com">
+          Servo
+        </a>
       </p>
     </div>
   )

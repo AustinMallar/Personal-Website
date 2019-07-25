@@ -1,5 +1,6 @@
 import React from "react"
 
+import SinglePostStyles from "./styles/SinglePostStyles"
 import { Link } from "gatsby"
 
 const Post = ({ node }) => {
@@ -10,17 +11,19 @@ const Post = ({ node }) => {
   const excerpt = node.excerpt
 
   return (
-    <div>
-      <h3>
-        <Link to={slug}>{title}</Link>
-      </h3>
-      <small>{date}</small>
-      <p
-        dangerouslySetInnerHTML={{
-          __html: description || excerpt,
-        }}
-      />
-    </div>
+    <Link to={slug}>
+      <SinglePostStyles>
+        <h3>
+          <Link to={slug}>{title}</Link>
+        </h3>
+        <small>{date}</small>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: description || excerpt,
+          }}
+        />
+      </SinglePostStyles>
+    </Link>
   )
 }
 

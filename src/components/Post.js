@@ -10,11 +10,13 @@ const Post = ({ node }) => {
   const description = node.frontmatter.description
   const excerpt = node.excerpt
 
+  const path = `posts${slug}`
+
   return (
-    <Link to={slug}>
+    <Link to={path}>
       <SinglePostStyles>
         <h3>
-          <Link to={slug}>{title}</Link>
+          <Link to={path}>{title}</Link>
         </h3>
         <small>{date}</small>
         <p

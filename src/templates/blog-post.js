@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import BlogPostTemplateStyles from "../components/styles/BlogPostTemplateStyles"
@@ -17,9 +18,15 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <BlogPostTemplateStyles>
-          <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <h1 className="post-title">{post.frontmatter.title}</h1>
+          <p className="post-date">{post.frontmatter.date}</p>
+          <Img
+            className="featured-image"
+            sizes={post.frontmatter.featuredImage.childImageSharp.sizes}
+          />
+          <div className="post-body">
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
 
           <ul className="post-nav">
             <li className="prev-post">
@@ -55,6 +62,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            sizes(maxWidth: 630) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
   }

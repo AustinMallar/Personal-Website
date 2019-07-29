@@ -26,6 +26,9 @@ const Posts = () => {
   `)
 
   const posts = data.allMarkdownRemark.edges
+
+  if (posts == null) return null
+
   return (
     <PostsStyles>
       {posts.map(({ node }) => {

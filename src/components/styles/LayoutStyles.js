@@ -1,6 +1,11 @@
 import styled from "styled-components"
 
 const LayoutStyles = styled.div`
+  div.container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
   a {
     text-decoration: none;
     color: #086ce4;
@@ -11,11 +16,6 @@ const LayoutStyles = styled.div`
     color: #b51f24;
   }
 
-  div.container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
   main {
     max-width: 900px;
     margin: 0 auto;
@@ -23,9 +23,18 @@ const LayoutStyles = styled.div`
     min-height: 500px;
   }
 
+  p {
+    margin-top: 1rem;
+  }
+
   p.bio-text {
     font-size: 1.2rem;
     text-align: center;
+  }
+
+  ul.list {
+    padding-top: 0.5rem;
+    padding-left: 2rem;
   }
 
   @media (max-width: 1000px) {

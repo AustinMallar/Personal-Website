@@ -1,12 +1,11 @@
 import React from "react"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class AboutIndex extends React.Component {
   render() {
     return (
-      <Layout location={this.props.location}>
+      <>
         <SEO
           title="About"
           description="Austin Mallar is a web developer, IT consultant and musician."
@@ -39,7 +38,7 @@ class AboutIndex extends React.Component {
             , I will be graduating in the Fall of 2019.
           </p>
         </div>
-      </Layout>
+      </>
     )
   }
 }

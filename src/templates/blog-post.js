@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
 import BlogPostTemplateStyles from "../components/styles/BlogPostTemplateStyles"
 import SEO from "../components/seo"
 
@@ -12,7 +11,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location}>
+      <>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -45,7 +44,7 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </BlogPostTemplateStyles>
-      </Layout>
+      </>
     )
   }
 }

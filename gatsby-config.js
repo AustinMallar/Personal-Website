@@ -70,9 +70,9 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-page-transitions",
+      resolve: `gatsby-plugin-layout`,
       options: {
-        transitionTime: 500,
+        component: require.resolve(`./src/components/layout.js`),
       },
     },
   ],

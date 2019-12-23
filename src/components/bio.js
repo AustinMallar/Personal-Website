@@ -33,7 +33,7 @@ const Bio = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          Longhouse Consulting
+          Longhouse Media
         </a>
         . I also play in the rock band{" "}
         <a

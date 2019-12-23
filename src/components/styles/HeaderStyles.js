@@ -24,16 +24,16 @@ const HeaderStyles = styled.header`
   }
 
   a.nav-link {
-    color: white;
+    color: #dddddd;
     transition: color 0.6s;
   }
 
   a.active {
-    color: #aaaaaa;
+    color: #fff;
   }
 
   a.nav-link:hover {
-    color: #cccccc;
+    color: #dddddd;
   }
 
   h1.site-title {
